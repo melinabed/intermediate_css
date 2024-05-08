@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="container">
+      <div class="left-screen">
+        <div id="title">DRIP</div>
+        <div id="footer">
+          Photo by Biola Visuals on
+          <a
+            href="https://www.pexels.com/photo/boy-in-denim-jacket-at-night-16499261/"
+            >Pexels</a
+          >
+        </div>
+      </div>
+      <div class="right-screen">
+        <div class="para">
+          <div>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <span id="italic">now</span> to get started.
+          </div>
+          <div>You <span id="italic">know</span> you want to.</div>
+        </div>
+        <div id="hook">Let's do this!</div>
+        <div class="form">
+          <form id="myForm">
+            <div class="left-form">
+              <label for="firstName">FIRST NAME</label>
+
+              <div>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="John"
+                  required
+                  minlength="3"
+                />
+                <div class="firstName-error"></div>
+              </div>
+
+              <label for="email">EMAIL</label>
+
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="johnsmith@email.com"
+                  required
+                  minlength="10"
+                />
+                <div class="email-error"></div>
+              </div>
+
+              <label for="password">PASSWORD</label>
+
+              <div>
+                <input
+                  type="password"
+                  id="password"
+                  pattern="[A-Z][a-zA-Z]\d{6}"
+                  required
+                />
+                <div class="password-error"></div>
+              </div>
+            </div>
+            <div class="right-form">
+              <label for="lastName">LAST NAME</label>
+
+              <div>
+                <input type="text" id="lastName" placeholder="optional" />
+              </div>
+
+              <label for="phone">PHONE NUMBER</label>
+
+              <div>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="123-456-7890"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  minlength="12"
+                  maxlength="12"
+                  required
+                />
+                <div class="phone-error"></div>
+              </div>
+
+              <label for="password-confirm">CONFIRM PASSWORD</label>
+
+              <div>
+                <input type="password" id="password-confirm" required />
+                <div class="confirm-error"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="account">
+          <button type="submit" form="myForm">Create Account</button>
+          <div>
+            Already have an account? <span id="login-link">Log in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

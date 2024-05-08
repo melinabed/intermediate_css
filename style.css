@@ -1,0 +1,192 @@
+/* font-family: "Jaini Purva", system-ui; */
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-screen {
+    min-height: 500px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .account {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*Change order of the input elements for a better flow when resized for mobile*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font: 1em Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*LEFT SCREEN*/
+
+.left-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 300px;
+
+  background: url(images/hero-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  font-size: 6rem;
+  font-family: "Jaini Purva", system-ui;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.536);
+  padding: 5px 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+/*RIGHT SCREEN*/
+
+.right-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: black;
+  flex: 1;
+}
+
+/*INTRO PARAGRAPH*/
+
+.para {
+  padding: 40px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+#italic {
+  font-style: italic;
+}
+
+#hook {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  padding-left: 40px;
+}
+
+/*FORM*/
+
+.form {
+  padding: 40px;
+  background: linear-gradient(black, rgb(38, 121, 189));
+  box-shadow: rgba(29, 142, 255, 0.338) 0px 8px 24px;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.left-form,
+.right-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  color: rgb(175, 175, 175);
+}
+
+/*Input and error CSS*/
+
+input {
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  border: 1px solid rgb(200, 200, 200);
+  height: 45px;
+  border-radius: 5px;
+  width: 100%;
+  color: black;
+}
+
+.email-error,
+.firstName-error,
+.phone-error,
+.password-error,
+.confirm-error {
+  color: red;
+  padding: 0px;
+  border-radius: 0 0 5px 5px;
+}
+
+.email-error.active,
+.firstName-error.active,
+.phone-error.active,
+.password-error.active,
+.confirm-error.active {
+  padding: 3px 6px;
+}
+
+/*BUTTON AND LOGIN PARA*/
+
+.account {
+  padding: 40px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+button {
+  max-width: 250px;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(38, 121, 189);
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: rgb(50, 142, 217);
+}
+
+.account > div {
+  font-size: 1.25rem;
+}
+
+#login-link {
+  color: rgb(38, 121, 189);
+  text-decoration: underline;
+}
